@@ -1,4 +1,4 @@
-from node:16-alpine
+from node:18
 
 WORKDIR /usr/src/app
 
@@ -7,5 +7,6 @@ COPY package.json .
 RUN npm install
 
 COPY gateway.js .
+COPY appsignal.cjs .
 
-CMD [ "node", "gateway.js" ]
+CMD [ "npm", "start" ]

@@ -1,18 +1,3 @@
-// Open Telemetry (optional)
-const { ApolloOpenTelemetry } = require('supergraph-demo-opentelemetry');
-
-if (process.env.APOLLO_OTEL_EXPORTER_TYPE) {
-  new ApolloOpenTelemetry({
-    type: 'subgraph',
-    name: 'users',
-    exporter: {
-      type: process.env.APOLLO_OTEL_EXPORTER_TYPE, // console, zipkin, collector
-      host: process.env.APOLLO_OTEL_EXPORTER_HOST,
-      port: process.env.APOLLO_OTEL_EXPORTER_PORT,
-    }
-  }).setupInstrumentation();
-}
-
 const { ApolloServer, gql } = require('apollo-server');
 const { buildSubgraphSchema } = require('@apollo/subgraph');
 const { readFileSync } = require('fs');

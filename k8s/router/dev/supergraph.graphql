@@ -90,3 +90,4 @@ enum join__Graph {
   PRODUCTS @join__graph(name: "products" url: "http://products:4000/graphql")
   USERS @join__graph(name: "users" url: "http://users:4000/graphql")
 }
+

@@ -4,10 +4,11 @@
   "description": "",
   "main": "pandas.js",
   "scripts": {
-    "start": "node pandas.js"
+    "start": "node --require './appsignal.cjs' pandas.js"
   },
   "dependencies": {
     "apollo-server": "3.13.0",
+    "@appsignal/nodejs": "^3.1.0",
     "graphql": "16.8.1"
   },
   "keywords": [],

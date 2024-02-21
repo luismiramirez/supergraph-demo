@@ -4,10 +4,11 @@
   "description": "",
   "main": "users.js",
   "scripts": {
-    "start": "node users.js"
+    "start": "node --require './appsignal.cjs' users.js"
   },
   "dependencies": {
     "@apollo/subgraph": "0.6.1",
+    "@appsignal/nodejs": "^3.1.0",
     "apollo-server": "3.13.0",
     "supergraph-demo-opentelemetry": "0.2.4",
     "graphql": "16.8.1"

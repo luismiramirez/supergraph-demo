@@ -4,10 +4,11 @@
   "description": "",
   "main": "router.js",
   "scripts": {
-    "start": "node router.js"
+    "start": "node --require './appsignal.cjs' gateway.js"
   },
   "dependencies": {
     "@apollo/gateway": "0.54.1",
+    "@appsignal/nodejs": "^3.1.0",
     "apollo-server": "3.13.0",
     "supergraph-demo-opentelemetry": "0.2.4",
     "graphql": "16.8.1"
